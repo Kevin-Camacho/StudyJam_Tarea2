@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorfondo"
+    tools:context="kevcompany.tarea_2calculeitor.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/txtNumero"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingLeft="230dp"
+            android:paddingTop="85dp"
+            android:text="Resultado"
+            android:textSize="30sp"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/bt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickBtn1"
+            android:text="@string/_1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <Button
+            android:id="@+id/bt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/bt1"
+            android:layout_toRightOf="@+id/bt1"
+            android:onClick="onClickBtn2"
+            android:text="2"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <Button
+            android:id="@+id/bt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickBtn3"
+            android:text="3"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/bt2"
+            android:layout_toEndOf="@+id/bt2" />
+
+        <Button
+            android:id="@+id/bt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/bt1"
+            android:layout_toEndOf="@+id/bt1"
+            android:layout_toRightOf="@+id/bt1"
+            android:onClick="onClickBtn5"
+            android:text="5"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <Button
+            android:id="@+id/bt6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bt5"
+            android:layout_alignLeft="@+id/bt3"
+            android:layout_alignStart="@+id/bt3"
+            android:onClick="onClickBtn6"
+            android:text="6"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage" />
+
+        <Button
+            android:id="@+id/btsum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/bt6"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/bt3"
+            android:onClick="onClickSuma"
+            android:text="+"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+        <Button
+            android:id="@+id/btdiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickDivision"
+            android:text="/"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,SpUsage"
+            android:layout_below="@+id/bt6"
+            android:layout_marginTop="97dp"
+            android:layout_alignRight="@+id/btsum"
+            android:layout_alignEnd="@+id/btsum"
+            android:layout_toRightOf="@+id/bt5"
+            android:layout_toEndOf="@+id/bt5" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/bt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="49dp"
+        android:onClick="onClickBtn4"
+        android:text="4"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/bt7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bt4"
+        android:onClick="onClickBtn7"
+        android:text="7"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/bt8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bt7"
+        android:layout_alignBottom="@+id/bt7"
+        android:layout_toEndOf="@+id/bt7"
+        android:layout_toRightOf="@+id/bt7"
+        android:onClick="onClickBtn8"
+        android:text="8"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/bt9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/bt8"
+        android:layout_alignBottom="@+id/bt8"
+        android:layout_toEndOf="@+id/bt8"
+        android:layout_toRightOf="@+id/bt8"
+        android:onClick="onClickBtn9"
+        android:text="9"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/bt0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt7"
+        android:layout_toLeftOf="@+id/bt9"
+        android:layout_toStartOf="@+id/bt9"
+        android:onClick="onClickBtn0"
+        android:text="0"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/btres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bt0"
+        android:layout_alignTop="@+id/bt9"
+        android:layout_toRightOf="@+id/bt9"
+        android:onClick="onClickResta"
+        android:text="-"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded,SpUsage" />
+
+    <Button
+        android:id="@+id/btpunto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bt7"
+        android:onClick="onClickBtnPunto"
+        android:text="."
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/btigual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt9"
+        android:layout_toEndOf="@+id/bt8"
+        android:layout_toRightOf="@+id/bt8"
+        android:onClick="onClickIgual"
+        android:text="="
+        android:textSize="20dp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <Button
+        android:id="@+id/btmul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/bt0"
+        android:layout_toLeftOf="@+id/btigual"
+        android:layout_toStartOf="@+id/btigual"
+        android:onClick="onClickMultiplicacion"
+        android:text="x"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btmul"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_toLeftOf="@+id/btres"
+        android:layout_toStartOf="@+id/btres"
+        android:onClick="onClickLimpia"
+        android:text="Borrar Todo" />
+
+</RelativeLayout>
